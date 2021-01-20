@@ -1,0 +1,7 @@
+.ItemsFavContainer {
+  border-left: solid 0.1em #dddddd;
+  height: 100%;
+  min-height: 100%;
+  margin-left: 3em;
+  width: 35%;
+}
