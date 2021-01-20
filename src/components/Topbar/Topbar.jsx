@@ -1,11 +1,13 @@
 import React from "module";
 import "./Topbar.css";
 
+import { NavLink } from "react-router-dom";
+
 const Topbar = () => (
   <div className="Topbar">
-    <a href="http://" target="_blank" rel="noopener noreferrer">
+    <NavLink to="/" exact="/">
       PokéAPI
-    </a>
+    </NavLink>
   </div>
 );
 
