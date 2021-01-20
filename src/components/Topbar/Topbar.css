@@ -1,0 +1,15 @@
+.Topbar {
+  align-items: center;
+  background: #efefef;
+  display: flex;
+  height: 3em;
+  justify-content: flex-start;
+  padding: 0.5em 4em;
+  width: 100%;
+}
+
+.Topbar a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
