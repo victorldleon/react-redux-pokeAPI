@@ -1,8 +1,10 @@
 import React from "react";
 import "./ItemCard.css";
 
+import { NavLink } from "react-router-dom";
+
 const ItemCard = () => (
-  <a href="#" className="ItemCard">
+  <NavLink to="/item" exact="/item" className="ItemCard">
     <div className="LeftContainer">
       <img src="https://via.placeholder.com/150" alt="" srcset="" />
       <p>Pokemon Name</p>
@@ -10,7 +12,7 @@ const ItemCard = () => (
     <div className="RightContainer">
       <button>+</button>
     </div>
-  </a>
+  </NavLink>
 );
 
 export default ItemCard;

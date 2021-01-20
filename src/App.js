@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
 
 import Topbar from "./components/Topbar/Topbar";
-// import { ItemViewContainer } from "./containers/ItemViewContainer/ItemViewContainer";
+import ItemViewContainer from "./containers/ItemViewContainer/ItemViewContainer";
 import ItemsContainer from "./containers/ItemsContainer/ItemsContainer";
 import ItemsFavContainer from "./containers/ItemsFavContainer/ItemsFavContainer";
 
@@ -12,8 +13,13 @@ class App extends Component {
       <div className="App">
         <Topbar />
         <div className="Main">
-          <ItemsContainer />
-          <ItemsFavContainer />
+          <Switch>
+            <Route path="/item" component={ItemViewContainer} />
+            <Route path="/">
+              <ItemsContainer />
+              <ItemsFavContainer />
+            </Route>
+          </Switch>
         </div>
       </div>
     );
