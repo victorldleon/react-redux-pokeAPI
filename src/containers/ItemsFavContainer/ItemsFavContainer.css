@@ -1,7 +1,17 @@
 .ItemsFavContainer {
+  align-items: flex-start;
   border-left: solid 0.1em #dddddd;
+  display: flex;
+  flex-flow: column;
   height: 100%;
   min-height: 100%;
   margin-left: 3em;
+  padding: 0 3em 0 3em;
   width: 35%;
+}
+
+.ItemsFavContainer h2 {
+  margin: 1.6em 0 1.25em 0;
+  text-align: left;
+  width: 100%;
 }

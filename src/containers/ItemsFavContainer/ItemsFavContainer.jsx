@@ -7,7 +7,7 @@ class ItemsFavContainer extends Component {
   render() {
     return (
       <div className="ItemsFavContainer">
-        <h1>Items Fav Container</h1>
+        <h2>Fav Pokémons</h2>
         <ItemCard />
         <ItemCard />
         <ItemCard />
