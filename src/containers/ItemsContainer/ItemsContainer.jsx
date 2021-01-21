@@ -9,6 +9,7 @@ class ItemsContainer extends Component {
     return (
       <div className="ItemsContainer">
         <SearchBar />
+        <h2>Fav Pokémons</h2>
         <ItemCard />
         <ItemCard />
         <ItemCard />

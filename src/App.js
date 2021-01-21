@@ -17,7 +17,6 @@ class App extends Component {
             <Route path="/item" component={ItemViewContainer} />
             <Route path="/">
               <ItemsContainer />
-              <ItemsFavContainer />
             </Route>
           </Switch>
         </div>
