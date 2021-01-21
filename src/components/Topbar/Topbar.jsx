@@ -5,9 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const Topbar = () => (
   <div className="Topbar">
-    <NavLink to="/" exact="/">
-      PokéAPI
-    </NavLink>
+    <NavLink to="/">PokéAPI</NavLink>
   </div>
 );
 

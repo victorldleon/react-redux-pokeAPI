@@ -3,11 +3,11 @@ import "./ItemCard.css";
 
 import { NavLink } from "react-router-dom";
 
-const ItemCard = () => (
-  <NavLink to="/item" exact="/item" className="ItemCard">
+const ItemCard = (props) => (
+  <NavLink to="/item" className="ItemCard">
     <div className="LeftContainer">
-      <img src="https://via.placeholder.com/150" alt="" srcset="" />
-      <p>Pokemon Name</p>
+      <img src={props.item.imgUrl} alt={props.name} />
+      <p>{props.item.name}</p>
     </div>
     <div className="RightContainer">
       <button>+</button>

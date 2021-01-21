@@ -5,11 +5,17 @@ import { Provider } from "react-redux";
 import { createStore, combineReducers } from "redux";
 import { BrowserRouter } from "react-router-dom";
 
+import favoriteItemsReducer from "./store/reducers/favoriteItemsReducer";
+import searchItemsReducer from "./store/reducers/searchItemsReducer";
+
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  favoriteItems: favoriteItemsReducer,
+  seachItems: searchItemsReducer,
+});
 
 const store = createStore(rootReducer);
 
