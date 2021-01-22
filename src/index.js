@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import { Provider } from "react-redux";
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import { BrowserRouter } from "react-router-dom";
+import thunk from "redux-thunk";
 
 import favoriteItemsReducer from "./store/reducers/favoriteItemsReducer";
 import searchItemsReducer from "./store/reducers/searchItemsReducer";
@@ -12,12 +13,25 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+const composeEnhancers =
+  process.env.NODE_ENV === "development"
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    : null || compose;
+
 const rootReducer = combineReducers({
   favoriteItems: favoriteItemsReducer,
   seachItems: searchItemsReducer,
 });
 
-const store = createStore(rootReducer);
+// const store = createStore(
+//   rootReducer,
+//   composeEnhancers(applyMiddleware(thunk))
+// );
+
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
+);
 
 ReactDOM.render(
   <React.StrictMode>

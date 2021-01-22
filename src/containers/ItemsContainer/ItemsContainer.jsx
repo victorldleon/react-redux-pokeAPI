@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./ItemsContainer.css";
 
 import { connect } from "react-redux";
-import * as actionTypes from "../../store/actions";
 
 import SearchBar from "../../components/SearchBar/SearchBar";
 import ItemCard from "../../components/ItemCard/ItemCard";
