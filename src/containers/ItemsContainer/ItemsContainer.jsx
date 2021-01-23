@@ -23,7 +23,7 @@ class ItemsContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    itemsList: state.favoriteItems.favItems,
+    itemsList: state.favoritePokemons.favItems,
   };
 };
 

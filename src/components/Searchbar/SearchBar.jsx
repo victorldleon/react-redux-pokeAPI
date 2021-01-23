@@ -20,24 +20,35 @@ class SearchBar extends Component {
   };
 
   render() {
+    let searchResultItem;
+    if (this.props.srchItem && this.props.srchItem.name) {
+      searchResultItem = <h2>{this.props.srchItem.name}</h2>;
+    } else {
+    }
     return (
-      <div className="SearchBar">
-        <input
-          type="text"
-          placeholder="Search Pokemons"
-          value={this.state.searchValue}
-          onChange={this.inputChangeHandler}
-        />
-        <button type="submit" onClick={this.searchHandler}>
-          search
-        </button>
+      <div>
+        <div className="SearchBar">
+          <input
+            type="text"
+            placeholder="Search Pokemons"
+            value={this.state.searchValue}
+            onChange={this.inputChangeHandler}
+          />
+          <button type="submit" onClick={this.searchHandler}>
+            search
+          </button>
+        </div>
+        {searchResultItem}
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  return {};
+  console.log("searchItems", state.searchPokemons.searchResults);
+  return {
+    srchItem: state.searchPokemons.searchResults,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {

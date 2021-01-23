@@ -1,1 +1,1 @@
-export { searchPokemon } from "./favoritePokemons";
+export { searchPokemon } from "./searchPokemonsActions";

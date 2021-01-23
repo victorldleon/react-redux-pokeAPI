@@ -6,8 +6,8 @@ import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import { BrowserRouter } from "react-router-dom";
 import thunk from "redux-thunk";
 
-import favoriteItemsReducer from "./store/reducers/favoriteItemsReducer";
-import searchItemsReducer from "./store/reducers/searchItemsReducer";
+import favoritePokemonsReducer from "./store/reducers/favoritePokemonsReducer";
+import searchPokemonsReducer from "./store/reducers/searchPokemonsReducer";
 
 import "./index.css";
 import App from "./App";
@@ -19,8 +19,8 @@ const composeEnhancers =
     : null || compose;
 
 const rootReducer = combineReducers({
-  favoriteItems: favoriteItemsReducer,
-  seachItems: searchItemsReducer,
+  favoritePokemons: favoritePokemonsReducer,
+  searchPokemons: searchPokemonsReducer,
 });
 
 const store = createStore(
