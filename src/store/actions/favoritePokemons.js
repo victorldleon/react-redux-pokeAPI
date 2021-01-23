@@ -13,6 +13,7 @@ export const searchPokemon = (props) => {
     axios
       .get("pokemon/" + props)
       .then((response) => {
+        console.log("results", response.data);
         console.log("response", response.data.sprites);
         // dispatch(setIngredients(response.data));
       })

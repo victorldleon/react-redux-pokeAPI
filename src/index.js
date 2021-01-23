@@ -23,11 +23,6 @@ const rootReducer = combineReducers({
   seachItems: searchItemsReducer,
 });
 
-// const store = createStore(
-//   rootReducer,
-//   composeEnhancers(applyMiddleware(thunk))
-// );
-
 const store = createStore(
   rootReducer,
   composeEnhancers(applyMiddleware(thunk))
