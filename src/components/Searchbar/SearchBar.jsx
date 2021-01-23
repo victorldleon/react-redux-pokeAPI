@@ -22,7 +22,16 @@ class SearchBar extends Component {
   render() {
     let searchResultItem;
     if (this.props.srchItem && this.props.srchItem.name) {
-      searchResultItem = <h2>{this.props.srchItem.name}</h2>;
+      searchResultItem = (
+        <div className="SearchResultContainer">
+          <img
+            src={this.props.srchItem.sprites.back_default}
+            alt={this.props.srchItem.name}
+          />
+          <h2>{this.props.srchItem.name}</h2>
+          <h2>{this.props.srchItem.name}</h2>
+        </div>
+      );
     } else {
     }
     return (
