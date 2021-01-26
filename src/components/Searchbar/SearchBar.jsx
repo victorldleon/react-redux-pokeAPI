@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./SearchBar.css";
 
 import { connect } from "react-redux";
@@ -24,20 +24,30 @@ class SearchBar extends Component {
     if (this.props.srchItem && this.props.srchItem.name) {
       searchResultItem = (
         <div className="SearchResultContainer">
-          <img
-            src={this.props.srchItem.sprites.back_default}
-            alt={this.props.srchItem.name}
-          />
-          <h2>{this.props.srchItem.name}</h2>
-          <h2>{this.props.srchItem.name}</h2>
+          <div className="LeftContainer">
+            <img
+              src={this.props.srchItem.sprites.back_default}
+              alt={this.props.srchItem.name}
+            />
+            <div className="col">
+              <h2>{this.props.srchItem.name}</h2>
+              <p>Height: {this.props.srchItem.height}</p>
+              <p>Weight: {this.props.srchItem.weight}</p>
+              <p>Experience: {this.props.srchItem.base_experience}</p>
+            </div>
+          </div>
+          <div className="RightContainer">
+            <button>+ Add To Favorites</button>
+          </div>
         </div>
       );
     } else {
     }
     return (
-      <div>
+      <React.Fragment>
         <div className="SearchBar">
           <input
+            className="SearchInput"
             type="text"
             placeholder="Search Pokemons"
             value={this.state.searchValue}
@@ -48,7 +58,7 @@ class SearchBar extends Component {
           </button>
         </div>
         {searchResultItem}
-      </div>
+      </React.Fragment>
     );
   }
 }

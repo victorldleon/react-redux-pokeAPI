@@ -4,11 +4,18 @@
   width: 100%;
 }
 
-.SearchBar input {
-  padding: 1em, 1em;
+input,
+input[type="password"],
+input[type="search"] {
+  cursor: auto;
+  padding: 1em;
+}
+
+.SearchBar .SearchInput {
   border: solid 0.1em #cccccc;
   border-radius: 0.3em;
   border-right: none;
+  padding: 1em, 1em !important;
   width: 100%;
 }
 
@@ -33,5 +40,50 @@
   color: white;
   cursor: pointer;
   font-size: 1em;
+  padding: 0.3em 0.7em;
+}
+
+.SearchResultContainer {
+  align-items: center;
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  width: 100%;
+}
+
+.SearchResultContainer .LeftContainer {
+  align-items: center;
+  display: flex;
+}
+
+.SearchResultContainer .LeftContainer img {
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: block;
+  height: 150px;
+  width: auto;
+}
+.SearchResultContainer .LeftContainer .col {
+  margin-left: 2em;
+  text-align: left;
+}
+
+.SearchResultContainer .RightContainer button {
+  background-color: rgb(14, 141, 201);
+  border: none;
+  border-radius: 0.3em;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 0.3em 0.7em;
+}
+
+.SearchResultContainer .RightContainer button:hover {
+  background-color: rgb(10, 101, 143);
+  border: none;
+  border-radius: 0.3em;
+  color: white;
+  cursor: pointer;
   padding: 0.3em 0.7em;
 }
