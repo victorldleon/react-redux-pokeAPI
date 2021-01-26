@@ -11,8 +11,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         searchResults: action.pokemon,
       };
-    case actionTypes.CLEAR_ITEMS:
-      return {};
+
     default:
       return state;
   }

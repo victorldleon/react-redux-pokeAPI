@@ -19,6 +19,10 @@ class SearchBar extends Component {
     this.props.onSearch(this.state.searchValue);
   };
 
+  addToFavHandler = (props) => {
+    this.props.addToFav(props);
+  };
+
   render() {
     let searchResultItem;
     if (this.props.srchItem && this.props.srchItem.name) {
@@ -37,7 +41,9 @@ class SearchBar extends Component {
             </div>
           </div>
           <div className="RightContainer">
-            <button>+ Add To Favorites</button>
+            <button onClick={() => this.addToFavHandler(this.props.srchItem)}>
+              + Add To Favorites
+            </button>
           </div>
         </div>
       );
@@ -64,7 +70,6 @@ class SearchBar extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log("searchItems", state.searchPokemons.searchResults);
   return {
     srchItem: state.searchPokemons.searchResults,
   };
@@ -73,6 +78,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onSearch: (searchValue) => dispatch(actions.searchPokemon(searchValue)),
+    addToFav: (pokemon) => dispatch(actions.addPokemonToFavorites(pokemon)),
   };
 };
 
