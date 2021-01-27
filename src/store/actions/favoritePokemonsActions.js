@@ -6,3 +6,10 @@ export const addPokemonToFavorites = (pokemon) => {
     pokemon: pokemon,
   };
 };
+
+export const removePokemonFromFavorites = (pokemonId) => {
+  return {
+    type: actionTypes.REMOVE_POKEMON_FROM_FAVORITES,
+    pokemonId: pokemonId,
+  };
+};

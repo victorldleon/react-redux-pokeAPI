@@ -37,6 +37,7 @@
   border-radius: 0.3em;
   color: white;
   cursor: pointer;
+  margin-left: 0.5em;
   font-size: 1.2em;
   padding: 0.3em 0.7em;
 }
@@ -47,5 +48,6 @@
   border-radius: 0.3em;
   color: white;
   cursor: pointer;
+  margin-left: 0.5em;
   padding: 0.3em 0.7em;
 }

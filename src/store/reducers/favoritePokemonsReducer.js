@@ -17,7 +17,13 @@ const reducer = (state = initialState, action) => {
         }),
       };
     case actionTypes.REMOVE_POKEMON_FROM_FAVORITES:
-      return {};
+      const updatedArray = state.favItems.filter(
+        (pokemon) => pokemon.id !== action.pokemonId
+      );
+      return {
+        ...state,
+        favItems: updatedArray,
+      };
     default:
       return state;
   }
